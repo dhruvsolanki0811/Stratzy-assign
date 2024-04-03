@@ -15,10 +15,10 @@ function SideBarCard() {
   
   return (
     <>
-      <div className="sidebar-card text-white w-[25rem] h-[max-content] rounded-[24px] bg-[#2A2136] p-[20px] flex flex-col gap-[22px]">
+      <div className="sidebar-card text-white w-[25rem] h-[max-content] rounded-[24px] bg-[#2A2136] p-[20px] flex flex-col gap-[15px]">
         <TopToggle></TopToggle>
         <div className="stock-detail w-full flex items-center no-wrap justify-between">
-          <div className="name-container flex flex-col gap-[8px]">
+          <div className="name-container flex flex-col gap-[4px]">
             <div className="stock-name text-[18px] font-[700]">TATA STEEL</div>
             <div className="ticker-name text-[13px] text-[#EBECEC]">
               {"{TickerName}"}
