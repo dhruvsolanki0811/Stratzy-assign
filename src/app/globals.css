@@ -1,3 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.root{
+    padding: 0;
+    margin: 0;
+    color: #ffffff;
+
+}
+
+.surface-dark{
+    background:#1A1520;
+}
+.sbmt-btn{
+    background: linear-gradient(180deg, #01C36D 0%, #01C16C 0.01%, #019C57 100%);
+}
+
+.toggle-btn-bg{
+    background: linear-gradient(180deg, #393046 0%, #2D2537 100%);
+
+}
