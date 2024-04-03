@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import TopToggle from "../ui/TopToggle";
 import { AiOutlineFall } from "react-icons/ai";
 import FormComponent from "../FormComponent/FormComponent";
@@ -12,10 +13,20 @@ import twitter from "../../assets/twitter.svg";
 import whatsapp from "../../assets/whatsapp.svg";
 
 function SideBarCard() {
-  
+  const [selectedActionOption, setSelectedActionOption] = useState("buy");
+
+  const handleActionOptionChange = (option: string) => {
+    setSelectedActionOption(option);
+  };
+  const [selectedTypeOption, setSelectedTypeOption] = useState("market");
+
+  const handleTypeOptionChange = (option: string) => {
+    setSelectedTypeOption(option);
+  };
+
   return (
     <>
-      <div className="sidebar-card text-white w-[25rem] h-[max-content] rounded-[24px] bg-[#2A2136] p-[20px] flex flex-col gap-[15px]">
+      <div className="sidebar-card text-white  w-[24rem]  h-full rounded-[24px] bg-[#2A2136] p-[20px] flex flex-col gap-[15px]">
         <TopToggle></TopToggle>
         <div className="stock-detail w-full flex items-center no-wrap justify-between">
           <div className="name-container flex flex-col gap-[4px]">
@@ -42,6 +53,8 @@ function SideBarCard() {
                 <input
                   type="radio"
                   value="option1"
+                  checked={selectedTypeOption === "market"}
+                  onChange={() => handleTypeOptionChange("market")}
                   className="form-radio accent-[#01C36D] h-5 w-5 text-green-500 rounded-full"
                 />
                 Market
@@ -51,6 +64,8 @@ function SideBarCard() {
                   type="radio"
                   value="option1"
                   className="form-radio h-5 w-5 accent-[#01C36D] rounded-full"
+                  checked={selectedTypeOption === "limit"}
+                  onChange={() => handleTypeOptionChange("limit")}
                 />
                 Limit
               </div>
@@ -64,6 +79,8 @@ function SideBarCard() {
                   type="radio"
                   value="option1"
                   className="form-radio accent-[#01C36D] h-5 w-5 text-green-500 rounded-full"
+                  checked={selectedActionOption === "buy"}
+                  onChange={() => handleActionOptionChange("buy")}
                 />
                 Buy
               </div>
@@ -72,6 +89,8 @@ function SideBarCard() {
                   type="radio"
                   value="option1"
                   className="form-radio h-5 w-5 accent-[#01C36D] rounded-full"
+                  checked={selectedActionOption === "sell"}
+                  onChange={() => handleActionOptionChange("sell")}
                 />
                 Sell
               </div>
@@ -94,9 +113,9 @@ function SideBarCard() {
             SEBI Reg. No. INH000009180
           </div>
         </div>
-        <div className="share-tag flex justify-center items-center w-full">
-          <div className="share-icons-container flex items-center gap-1 ">
+        <div className="share-tag flex justify-center items-center w-full gap-5 text-[13px]">
             <div className="share-icons">ShareOn</div>
+          <div className="share-icons-container flex items-center gap-1 ">
             <div className="share-icons relative">
               {" "}
               <Image src={insta} alt="My SVG" className="" />
