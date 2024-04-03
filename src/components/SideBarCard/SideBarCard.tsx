@@ -12,6 +12,7 @@ import twitter from "../../assets/twitter.svg";
 import whatsapp from "../../assets/whatsapp.svg";
 
 function SideBarCard() {
+  
   return (
     <>
       <div className="sidebar-card text-white w-[25rem] h-[max-content] rounded-[24px] bg-[#2A2136] p-[20px] flex flex-col gap-[22px]">
@@ -33,7 +34,7 @@ function SideBarCard() {
             </div>
           </div>
         </div>
-        <div className="type-btn-container flex flex-col gap-[30px]">
+        <div className="type-btn-container flex flex-col gap-[25px]">
           <div className="order-type-btn flex items-center justify-between w-full ">
             <div className="label text-[16px] font-[500]">Order Type</div>
             <div className="btn-container flex items-center gap-[20px]">
@@ -86,7 +87,7 @@ function SideBarCard() {
         </div>
         <SubmitButton></SubmitButton>
         <div className="sebi-tag flex justify-center items-center w-full">
-          <div className="sedi-num text-[12px] font-[400] flex gap-1 items-end  text-[#EBECEC]">
+          <div className="sedi-num text-[10px] text-[#EBECEC] font-[400] flex gap-1 items-end">
             <span className="relative">
               <Image src={sebi} alt="My SVG" className="" />
             </span>
@@ -94,7 +95,7 @@ function SideBarCard() {
           </div>
         </div>
         <div className="share-tag flex justify-center items-center w-full">
-          <div className="share-icons-container flex items-center ">
+          <div className="share-icons-container flex items-center gap-1 ">
             <div className="share-icons">ShareOn</div>
             <div className="share-icons relative">
               {" "}
