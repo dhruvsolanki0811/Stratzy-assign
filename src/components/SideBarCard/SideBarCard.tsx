@@ -26,7 +26,7 @@ function SideBarCard() {
 
   return (
     <>
-      <div className="sidebar-card text-white  w-[24rem]  h-full rounded-[24px] bg-[#2A2136] p-[20px] flex flex-col gap-[15px]">
+      <div className="sidebar-card text-white  w-[24rem]  h-[max-content] rounded-[24px] bg-[#2A2136] p-[20px] flex flex-col gap-[15px]">
         <TopToggle></TopToggle>
         <div className="stock-detail w-full flex items-center no-wrap justify-between">
           <div className="name-container flex flex-col gap-[4px]">
@@ -114,7 +114,7 @@ function SideBarCard() {
           </div>
         </div>
         <div className="share-tag flex justify-center items-center w-full gap-5 text-[13px]">
-            <div className="share-icons">ShareOn</div>
+          <div className="share-icons">ShareOn</div>
           <div className="share-icons-container flex items-center gap-1 ">
             <div className="share-icons relative">
               {" "}
